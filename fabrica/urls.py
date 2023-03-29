@@ -20,4 +20,5 @@ from gestionPeriodo.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
+    path('guardar/', guardar, name="guardar"),
 ]
