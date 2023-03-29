@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head lang="es">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario académico</title>
+    <link rel="stylesheet" href="Ventanas.css">
+</head>
+
+<body>
+    <header>
+        <img src="data:image/png;base64,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"
+            alt="Logo de la Udea">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </header>
+
+    <nav>
+        <h1>Crear calendario académico</h1>
+    </nav>
+
+    <div class="ventana1 p-2"> <!--VENTANA PRINCIPAL-->
+
+
+        <div class="definicion_calendario p-2 ">
+
+            <h4>Definición de calendario académico</h4>
+
+            <h6 class="form-label mt-2">Seleccione la facultad a asignar calendario académico</h6>
+            <fieldset>
+                <select class="form-select" required>
+                    <option value="">Ninguna</option>
+                    <option value="1">Facultad de Ingenieria</option>
+                    <option value="2">Facultad de Medicina</option>
+                    <option value="3">Facultad de Ciencias Exactas y Naturales</option>
+                    <option value="4">Facultad de Derecho y Ciencias Politicas</option>
+                    <option value="5">Facultad de Artes</option>
+                    <option value="6">Facultad de Ciencias Agrarias</option>
+                    <option value="7">Facultad de Contaduría y Administración</option>
+                    <option value="8">Facultad de Ciencias Económicas</option>
+                    <option value="9">Facultad de Ciencias Farmacéuticas y Alimentarias</option>
+                    <option value="10">Facultad de Ciencias Sociales y Humanas</option>
+                    <option value="11">Facultad de Comunicaciones y Filología</option>
+                    <option value="12">Facultad de Educación</option>
+                    <option value="13">Facultad de Enfermería</option>
+                    <option value="14">Facultad de Odontoloía</option>
+                    <option value="15">Facultad de Salud Pública</option>
+                </select>
+            </fieldset>
+
+            <h6 class="mt-3">Fecha de periodo de matricula</h6> <!--FECHAS DE MATRICULA-->
+            <div class="ventanaInterior mb-3 p-3 card">
+                <label class="form-label">Seleccione la fecha de inicio de la matricula</label>
+                <input type="date" value="" class="form-control">
+                <label class="form-label mt-2">Seleccione la fecha de continuación de la matricula</label>
+                <input type="date" value="" class="form-control">
+            </div>
+
+            <h6 class="mt-3">Fecha de periodo de ajustes</h6> <!--FECHAS DE AJUSTES-->
+            <div class="ventanaInterior mb-3 p-3 card">
+                <label class="form-label mt-2">Seleccione la fecha para ajustes de matricula</label>
+                <input type="date" value="" class="form-control">
+                <label class="form-label mt-2">Seleccione la fecha de culminación de los ajustes de matricula</label>
+                <input type="date" value="" class="form-control">
+            </div>
+        </div>
+        <div class="definicion_semestre">
+
+            <h4>Definición de semestre académico</h4>
+            <h6 class="mt-3">Fecha de Semestre Académico</h6> <!--FECHAS DE SEMESTRE-->
+            <div class="ventanaInterior p-3 card">
+                <label class="form-label mt-3">Seleccione la fecha de inicio de semestre</label>
+                <input type="date" value="2023-05-01" class="form-control">
+
+                <label class="form-label mt-3">Fecha de culminación de semestre</label>
+                <input type="date" value="2023-09-08" class="form-control">
+
+                <label class="form-label mt-3">Fecha límite evaluación del 40%</label>
+                <input type="date" value="2023-06-29" class="form-control">
+            </div>
+
+            <h6 class="mt-3">Fecha de periodo de cierre</h6> <!--FECHAS DE HABILITACION Y VALIDACION-->
+            <div class="ventanaInterior p-3 card">
+                <label class="form-label mt-3">Fecha de inicio de habilitación y validación</label>
+                <input type="date" value="2023-09-09" class="form-control">
+
+                <label class="form-label mt-3">Fecha de culminacion de habilitación y validación</label>
+                <input type="date" value="2023-09-17" class="form-control">
+
+                <label class="form-label mt-3">Fecha de cierre de periodo académico</label>
+                <input type="date" value="2023-09-19" class="form-control">
+            </div>
+        </div>
+        
+    </div>
+    <div style="text-align: right" class="div_enviar"> <!--BOTÓN DE ENVIAR-->
+        <button class="btn_enviar" onclick="enviar()">ENVIAR</button>
+    </div>
+
+</body>
+
+</html>
